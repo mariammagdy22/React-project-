@@ -1,0 +1,43 @@
+{
+  "name": "payment",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "method": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "orgname": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "orgs": {
+      "type": "hasOne",
+      "model": "org",
+      "foreignKey": ""
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

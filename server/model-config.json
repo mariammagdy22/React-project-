@@ -1,0 +1,86 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "comment": {
+    "dataSource": "db",
+    "public": true
+  },
+  "notification": {
+    "dataSource": "db",
+    "public": true
+  },
+  "post": {
+    "dataSource": "db",
+    "public": true
+  },
+  "org": {
+    "dataSource": "db",
+    "public": true
+  },
+  "member": {
+    "dataSource": "db",
+    "public": true
+  },
+  "message": {
+    "dataSource": "db",
+    "public": true
+  },
+  "recommendation": {
+    "dataSource": "db",
+    "public": true
+  },
+  "activity": {
+    "dataSource": "db",
+    "public": true
+  },
+  "payment": {
+    "dataSource": "db",
+    "public": true
+  },
+  "reviews": {
+    "dataSource": "db",
+    "public": true
+  },
+  "reservation": {
+    "dataSource": "db",
+    "public": true
+  },
+  "meetings": {
+    "dataSource": "db",
+    "public": true
+  }
+}

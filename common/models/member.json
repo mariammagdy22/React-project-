@@ -1,0 +1,52 @@
+{
+  "name": "member",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "pic": {
+      "type": "string"
+    },
+    "birthdate": {
+      "type": "date",
+      "required": true
+    },
+    "accountdate": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "mobile": {
+      "type": [
+        "string"
+      ]
+    },
+    "gender": {
+      "type": "string",
+      "required": true
+    },
+    "rate": {
+      "type": "number"
+    },
+    "interests": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

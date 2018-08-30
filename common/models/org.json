@@ -1,0 +1,67 @@
+{
+  "name": "org",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "orgname": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": [
+        "number"
+      ],
+      "required": true
+    },
+    "address": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "phone": {
+      "type": [
+        "string"
+      ]
+    },
+    "info": {
+      "type": [
+        "string"
+      ]
+    },
+    "qrcode": {
+      "type": "any"
+    },
+    "culture": {
+      "type": [
+        "string"
+      ]
+    },
+    "logo": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "recommendations": {
+      "type": "hasMany",
+      "model": "recommendation",
+      "foreignKey": ""
+    },
+    "reviews": {
+      "type": "hasMany",
+      "model": "reviews",
+      "foreignKey": ""
+    },
+    "activities": {
+      "type": "hasMany",
+      "model": "activity",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,98 @@
+{
+  "name": "meetings",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "gender": {
+      "type": "string",
+      "required": true
+    },
+    "contact": {
+      "type": "string",
+      "required": true
+    },
+    "purpose": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {
+    "addMeeting": {
+      "accepts": [
+        {
+          "arg": "username",
+          "type": "string",
+          "required": true,
+          "description": "the name of user or the group",
+          "http": {
+            "source": "form"
+          }
+        },
+        {
+          "arg": "date",
+          "type": "date",
+          "required": true,
+          "description": "gender",
+          "http": {
+            "source": "form"
+          }
+        },
+        {
+          "arg": "contact",
+          "type": "string",
+          "required": true,
+          "description": "whether contact by number or via chating",
+          "http": {
+            "source": "form"
+          }
+        },
+        {
+          "arg": "purpose",
+          "type": "string",
+          "required": true,
+          "description": "specifiy the purpose or the place which or where you will meet to another user",
+          "http": {
+            "source": "form"
+          }
+        },
+        {
+          "arg": "userId",
+          "type": "string",
+          "required": true,
+          "description": "the current userId ",
+          "http": {
+            "source": "query"
+          }
+        }
+      ],
+      "returns": [],
+      "description": "Add details about meeting someone for what purose and when",
+      "http": [
+        {
+          "path": "/addmeeting",
+          "verb": "post"
+        }
+      ]
+    }
+  }
+}

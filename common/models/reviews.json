@@ -1,0 +1,41 @@
+{
+  "name": "reviews",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "body": {
+      "type": "string",
+      "required": true
+    },
+    "branch": {
+      "type": [
+        "string"
+      ],
+      "required": true
+    },
+    "rate": {
+      "type": "number",
+      "required": true
+    },
+    "pic": {
+      "type": "string"
+    },
+    "orgname": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "user": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
